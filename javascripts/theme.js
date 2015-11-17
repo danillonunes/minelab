@@ -31,7 +31,7 @@ jQuery(document).ready(function($){
 		$('#account:not(.cms) .my-page').parent().detach().prependTo('#account ul:first');
 
 		/* Time logger compatibility */
-		if (typeof updateTimeLoggerMenu) {
+		if (typeof updateTimeLoggerMenu == 'function') {
 			$('#time-logger-menu').after('<span id="time-logger-menu"></span>').remove();
 			updateTimeLoggerMenu();
 		}
